@@ -1,0 +1,13 @@
+#Jogo de adivinhar. O computador "pensa" em um número de 1 a 10 e o player adivinha
+from random import randint
+pl = int(input('Acabei de pensar em um número entre 1 e 10. Adivinhe qual: ')) #player digita seu palpite
+pc = randint (1, 10) #pc "pensa" em um número
+c = 1 #conta as tentativas até o player acertar
+while pl != pc:
+    c += 1
+    if pl < pc:
+        pl = int(input('Mais alto! Tente outra vez: '))
+    elif pl > pc:
+        pl = int(input('Mais baixo! Tente outra vez: '))
+if pl == pc:
+    print ('Parabéns! Eu pensei no número {}. Você acertou na {}ª tentativa.'.format(pc, c))
