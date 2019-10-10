@@ -1,0 +1,31 @@
+#Este algoritmo pede para o usuário escolher dois números e qual operação deseja realizar entre eles
+n1 = int(input('Digite o primeiro valor: '))
+n2 = int(input('Digite o segundo valor: '))
+opcao = 0
+while opcao != 5:
+    print ( '''    [1] Somar
+    [2] Multiplicar
+    [3] Maior
+    [4] Novos Números
+    [5] Encerrar programa''')
+    opcao = int(input('Escolha uma opção: '))
+    if opcao == 1:
+        print ('A soma de {} e {} é {}.'.format(n1, n2, n1+n2))
+    elif opcao == 2:
+        print ('O produto de {} e {} é {}.'.format(n1, n2, n1*n2))
+    elif opcao == 3:
+        if n1 == n2:
+            print ('Os números {} e {} são iguais, não existe maior.'.format(n1, n2))
+        else:
+            if n1 > n2:
+                maior = n1
+            elif n1 < n2:
+                maior = n2
+            print ('O maior número entre {} e {} é {}.'.format(n1, n2, maior))
+    elif opcao == 4:
+        n1 = int(input('Digite o primeiro valor: '))
+        n2 = int(input('Digite o segundo valor: '))
+    else:
+        print ('Opção inválida.')
+    print ('=-'*10)
+print ('Fim do programa.')
